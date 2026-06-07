@@ -1,0 +1,17 @@
+import React from 'react'
+import { Link } from "react-router-dom";
+
+function Home() {
+    return (
+        <div>
+            <h1>Home Page</h1>
+            <Link to="/projects/1">Project 1</Link>
+            <br />
+            <Link to ="/projects/2">Project 2</Link>
+            <br />
+            <Link to ="/projects/3">Project 3</Link>
+
+        </div>
+    );
+}
+export default Home
