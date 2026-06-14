@@ -1,26 +1,38 @@
-import { NavLink } from "react-router-dom"
-import "./Navbar.css";
-import { useTheme } from "../context/ThemeContext";
+import { Link } from "react-router-dom"
 
 function Navbar() {
-    const { theme, setTheme } = useTheme();
-    const toggleTheme = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-    };
-
     return (
-        <nav className="navbar">
-            <div className="nav-links">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            </div>
-            <button onClick={toggleTheme} className="theme-btn">
-                {theme === "dark" ? "Light Mode" : "Dark Mode"}
-            </button>
-        </nav>
+        <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md 
+        flex justify-between items-center px-16 py-6">
+            <h2 className="text-white text-xl font-semibold justify-center">
+                My Portfolio
+            </h2>
 
+            <ul className="flex gap-8 py-3 text-gray-300">
+                <li>
+                    <Link to="/" className="hover:text-green-400">
+                    Home
+                    </Link>   
+                </li>
+                <li>
+                    <Link to="/about" className="hover:text-green-400">
+                    About
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/projects" className="hover:text-green-400">
+                    Projects
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/contact" className="hover:text-green-400">
+                    Contact
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     );
 }
-export default Navbar
+
+export default Navbar;
+
