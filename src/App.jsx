@@ -108,7 +108,7 @@ function Projects() {
             link: "https://github.com"
         },
         {
-            title: "W-8-Portfolio",
+            title: "Personal-Portfolio",
             desc: "A personal portfolio built with React and Tailwind CSS, focusing on animation, React Router, and Context API.",
             link: "https://github.com"
         }
